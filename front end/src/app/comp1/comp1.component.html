@@ -1,0 +1,19 @@
+<div class="container mt-3">
+   <div class="row">
+       
+       <div class="col-md-4">
+           <select class="form-control"  [(ngModel)]="selectedState" (change)="changestate()">               
+               <option *ngFor="let data of states"  value="{{data}}">{{ data }}</option>
+            </select>
+        </div>
+       
+        <div class="col-md-4">
+            <select class="form-control" [(ngModel)]="selectedDistrict">
+                <option *ngFor="let data of state" value="{{ data.district }}">{{ data.district }}</option>
+            </select>
+        </div>
+
+   </div>
+   <div>selected state =  {{selectedState}}</div>
+   <div>selected district =  {{selectedDistrict}}</div>
+</div>

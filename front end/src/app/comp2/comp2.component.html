@@ -1,0 +1,52 @@
+<div class="container mt-3">
+    <div class="row">
+        
+        <div class="col-md-3">
+            <div class="form-floating">
+                <select class="form-select" id="sel1"  (change)="changeState($event)" >
+                    <option value="0"></option>
+                  <option *ngFor="let data of states" value="{{ data.id  }}">{{ data.name }}</option>
+                 
+                </select>
+                <label for="sel1" class="form-label">Select State</label>
+              </div>
+         </div>
+        
+         
+         <div class="col-md-3">
+             <div class="form-floating">
+                 <select class="form-select" id="sel2" (change)="changeDistrict($event)">
+                     <option value="0"></option>
+                     <option *ngFor="let data of districts" value="{{ data.id }}">{{ data.name }}</option>
+                     
+                </select>
+                <label for="sel2" class="form-label">Select District</label>
+              </div>
+         </div>
+         
+         <div class="col-md-3">
+            <div class="form-floating">
+                <select class="form-select" id="sel2" (change)="changeTaluka($event)">
+                    <option value="0"></option>
+                    <option *ngFor="let data of talukas" value="{{ data.id }}">{{ data.name }}</option>
+                    
+               </select>
+               <label for="sel2" class="form-label">Select District</label>
+             </div>
+        </div>
+         
+         <div class="col-md-3">
+            <div class="form-floating">
+                <select class="form-select" id="sel4" >
+                  <option value="0"></option>
+                  <option *ngFor="let data of villages" value="{{data.id }}">{{ data.name }}</option>
+                 
+                </select>
+                <label for="sel4" class="form-label">Select Village</label>
+              </div>
+         </div>
+        </div>
+   
+ </div>
+ 
+ 
